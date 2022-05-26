@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="setContent(content)">
+    <head>
+        <title>Simple SideBar - Start Bootstrap Template</title>
+        <link th:href="@{/vender/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+        <link rel="stylesheet" th:href="@{/css/simple-sidebar.css}">
+
+        <script th:src="@{/vender/jquery/jquery.min.js}"></script>
+        <script th:src="@{/vender/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    </head>
+
+    <body>
+        <div class = "container-fluid">
+            <th:block th:replace="${content}"></th:block>
+        </div>
+    </body>
+</th:block>
+</html>
